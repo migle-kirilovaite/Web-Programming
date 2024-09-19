@@ -1,91 +1,56 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<YarnShop>
-    <Materials>
-        <Yarn>
-            <Type type="Cotton">
-                <Manufacturer brand="YarnArt">
-                    <Item>
-                        <Name>YarnArt Jeans</Name>
-                        <Description>
-                            Jeans sudėtis: 55% medvilnė, 45% poliakrilas, 50 g 160 m,
-                            Rekomenduojami virbalai: 3,5 mm (US 4), vąšelis – 3,5 mm (US E-4),
-                            (žaislams 1,75 – 2.5 mm).
-                        </Description>
-                        <Price currency="Eur">1.80</Price>
-                        <Stock>20</Stock>
-                    </Item>
-                    <Item>
-                        <Name>YarnArt Macrame Cotton</Name>
-                        <Description>
-                            YarnArt Macrame Cotton – virvelės tipo siūlas skirtas nerti vąšeliu.
-                            80% medvilnė, 20% poliesteris
-                            Svoris: 250 g,Ilgis: 225 m
-                        </Description>
-                        <Price currency="Eur">4.50</Price>
-                        <Stock>16</Stock>
-                    </Item>
-                </Manufacturer>
-                <Manufacturer brand="Gazzal">
-                    <Item>
-                        <Name>Gazzal Baby Cotton</Name>
-                        <Description>
-                            Baby cotton – minkštutė medvilnė įvairiems gaminiams.
-                            50g – 165m 60% medvilnė, 40% akrilas
-                            Rekomenduojami 3 – 3,5 mm virbalai arba 1.75 – 3,5 mm vąšelis.
-                        </Description>
-                        <Price currency="Eur">1.80</Price>
-                        <Stock>13</Stock>
-                    </Item>
-                </Manufacturer>
-            </Type>
-            <Type type="Wool">
-                <Manufacturer brand="Alize">
-                    <Item>
-                        <Name>Alize Merino Royal</Name>
-                        <Description>
-                            Alize Merino Royal – Alize Premium kolekcijos pažiba,
-                            vertinama visoje Europoje dėl išskirtinio glotnumo ir kokybiško apdirbimo.
-                            Sudėtis: 100% vilna 50 g – 100 m
-                        </Description>
-                        <Price currency="Eur">3.50</Price>
-                        <Stock>4</Stock>
-                    </Item>
-                </Manufacturer>
-            </Type>
+<Items xmlns="http://yarnshop.com/items"
+       xmlns:tools="http://yarnshop.com/tools">
+    <Fiber>
+        <Yarn type="cotton">
+            <Manufacturer brand="YarnArt">
+                <Item>
+                    <Name>YarnArt Jeans</Name>
+                    <Price currency="Eur">1.80</Price>
+                    <Stock color="Pink" lastUpdated="2024-09-23">20</Stock>
+                </Item>
+                <Item>
+                    <Name>YarnArt Macrame Cotton</Name>
+                    <Price currency="Eur">4.50</Price>
+                    <Stock color="Blue" lastUpdated="2024-08-15">16</Stock>
+                </Item>
+            </Manufacturer>
+            <Manufacturer brand="Gazzal">
+                <Item>
+                    <Name>Gazzal Baby Cotton</Name>
+                    <Price currency="Eur">1.80</Price>
+                    <Stock color="Red" lastUpdated="2024-03-31">13</Stock>
+                </Item>
+            </Manufacturer>
         </Yarn>
-        <Tools>
-            <Hooks>
-                <Type type="Metal">
-                    <Manufacturer brand="KnitPro">
-                        <Item>
-                            <Name>KnitPro vąšelis su rankenėle</Name>
-                            <Description>
-                                KnitPro aliuminis vąšelis su plastikine rankenėle nėrimui.
-                                Tai lengvas, patogus vąšelis su vidutinio aštrumo galiuku,
-                                kad būtų patogu užkabinti siūlą.
-                            </Description>
-                            <Price currency="Eur">2.60</Price>
-                            <Stock>8</Stock>
-                        </Item>
-                    </Manufacturer>
-                </Type>
-            </Hooks>
-            <Needles>
-                <Type type="Wood">
-                    <Manufacturer brand="KnitPro">
-                        <Item>
-                            <Name>KnitPro Ginger virbalai su valu</Name>
-                            <Description>
-                                Unikalūs, tvarūs KnitPro Ginger medžio masyvo virbalai su valu,
-                                pagaminti iš sertifikuotos FSC™ medienos, išgaunamos iš prižiūrimų Europos miškų.
-                                Ilgis 80 cm.
-                            </Description>
-                            <Price currency="Eur">6.80</Price>
-                            <Stock>5</Stock>
-                        </Item>
-                    </Manufacturer>
-                </Type>
-            </Needles>
-        </Tools>
-    </Materials>
-</YarnShop>
+        <Yarn type="Wool">
+            <Manufacturer brand="Alize">
+                <Item>
+                    <Name>Alize Merino Royal</Name>
+                    <Price currency="Eur">3.50</Price>
+                    <Stock color="Yellow" lastUpdated="2024-06-05">4</Stock>
+                </Item>
+            </Manufacturer>
+        </Yarn>
+    </Fiber>
+    <tools:Tools>
+        <tools:Hooks type="Metal">
+            <tools:Manufacturer brand="KnitPro">
+                <tools:Item>
+                    <tools:Name>KnitPro vąšelis su rankenėle</tools:Name>
+                    <tools:Price currency="Eur">2.60</tools:Price>
+                    <tools:Stock size="3.5 mm" lastUpdated="2024-02-25">8</tools:Stock>
+                </tools:Item>
+            </tools:Manufacturer>
+        </tools:Hooks>
+        <tools:Needles type="Wood">
+            <tools:Manufacturer brand="KnitPro">
+                <tools:Item>
+                    <tools:Name>KnitPro Ginger virbalai su valu</tools:Name>
+                    <tools:Price currency="Eur">6.80</tools:Price>
+                    <tools:Stock size="5 mm" lastUpdated="2024-01-12">5</tools:Stock>
+                </tools:Item>
+            </tools:Manufacturer>
+        </tools:Needles>
+    </tools:Tools>
+</Items>
