@@ -28,3 +28,7 @@ sum(//Price)
 4. dvi aibes, XPath compares each node in the first set to each node in the second set. If any pair of nodes satisfies the comparison, the result is true.
 7.
 //Yarn[@type='cotton']/Manufacturer/Item/Price < //Yarn[@type='Wool']/Manufacturer/Item/Price
+8.
+Kai norima ištraukti duomenis iš interneto svetainių.
+XML Duomenų Apdorojimas.
+Testavimo Automatizavimas.
