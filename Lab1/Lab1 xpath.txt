@@ -8,3 +8,8 @@
 /Items/Fiber/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Stock/attribute::color
 2.
 //tools:Item[tools:Price/@currency = //Fiber/Yarn/Manufacturer/Item/Price/@currency]
+3.
+count(//text()[normalize-space()])
+sum(//Price)
+<a><b>2</b><c>3</c></a> sum(//*) 23 (iš elemento <a>) + 2 (iš elemento <b>) + 3 (iš elemento <c>) = 28
+
