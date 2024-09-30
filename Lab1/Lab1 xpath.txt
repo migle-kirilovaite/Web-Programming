@@ -27,3 +27,4 @@ sum(//Price)
 3. aibę ir loginę reikšmę, XPath converts each node in the set to a boolean. If any node converts to a boolean that satisfies the comparison, the result is true.
 4. dvi aibes, XPath compares each node in the first set to each node in the second set. If any pair of nodes satisfies the comparison, the result is true.
 7.
+//Yarn[@type='cotton']/Manufacturer/Item/Price < //Yarn[@type='Wool']/Manufacturer/Item/Price
