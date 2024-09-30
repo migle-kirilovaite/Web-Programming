@@ -47,7 +47,7 @@
             <tools:Manufacturer brand="KnitPro">
                 <tools:Item>
                     <tools:Name>KnitPro Ginger virbalai su valu</tools:Name>
-                    <tools:Price currency="Eur">6.80</tools:Price>
+                    <tools:Price currency="Usd">6.80</tools:Price>
                     <tools:Stock size="5 mm" lastUpdated="2024-01-12">5</tools:Stock>
                 </tools:Item>
             </tools:Manufacturer>

@@ -6,3 +6,5 @@
 /Items/Fiber/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Name/following::Stock
 /Items/Fiber/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Stock/preceding::Name
 /Items/Fiber/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Stock/attribute::color
+2.
+//tools:Item[tools:Price/@currency = //Fiber/Yarn/Manufacturer/Item/Price/@currency]
