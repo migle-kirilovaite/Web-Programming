@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Items xmlns="http://yarnshop.com/items"
-       xmlns:tools="http://yarnshop.com/tools">
+       xmlns:t="http://yarnshop.com/tools">
     <Fiber>
         <Yarn type="cotton">
             <Manufacturer brand="YarnArt">
@@ -33,24 +33,24 @@
             </Manufacturer>
         </Yarn>
     </Fiber>
-    <tools:Tools>
-        <tools:Hooks type="Metal">
-            <tools:Manufacturer brand="KnitPro">
-                <tools:Item>
-                    <tools:Name>KnitPro vąšelis su rankenėle</tools:Name>
-                    <tools:Price currency="Eur">2.60</tools:Price>
-                    <tools:Stock size="3.5 mm" lastUpdated="2024-02-25">8</tools:Stock>
-                </tools:Item>
-            </tools:Manufacturer>
-        </tools:Hooks>
-        <tools:Needles type="Wood">
-            <tools:Manufacturer brand="KnitPro">
-                <tools:Item>
-                    <tools:Name>KnitPro Ginger virbalai su valu</tools:Name>
-                    <tools:Price currency="Usd">6.80</tools:Price>
-                    <tools:Stock size="5 mm" lastUpdated="2024-01-12">5</tools:Stock>
-                </tools:Item>
-            </tools:Manufacturer>
-        </tools:Needles>
-    </tools:Tools>
+    <t:Tools>
+        <t:Hooks type="Metal">
+            <t:Manufacturer brand="KnitPro">
+                <t:Item>
+                    <t:Name>KnitPro vąšelis su rankenėle</t:Name>
+                    <t:Price currency="Eur">2.60</t:Price>
+                    <t:Stock size="3.5 mm" lastUpdated="2024-02-25">8</t:Stock>
+                </t:Item>
+            </t:Manufacturer>
+        </t:Hooks>
+        <t:Needles type="Wood">
+            <t:Manufacturer brand="KnitPro">
+                <t:Item>
+                    <t:Name>KnitPro Ginger virbalai su valu</t:Name>
+                    <t:Price currency="Usd">6.80</t:Price>
+                    <t:Stock size="5 mm" lastUpdated="2024-01-12">5</t:Stock>
+                </t:Item>
+            </t:Manufacturer>
+        </t:Needles>
+    </t:Tools>
 </Items>
