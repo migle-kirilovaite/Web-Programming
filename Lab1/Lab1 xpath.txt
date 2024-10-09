@@ -1,14 +1,14 @@
 ﻿1.
-/Items/Supplies/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Name/ancestor::Yarn
-/Items/Supplies/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/descendant::Stock
-/Items/Supplies/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Name/following-sibling::Price
-/Items/Supplies/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Stock/preceding-sibling::Name
-/Items/Supplies/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Name/following::Stock
-/Items/Supplies/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Stock/preceding::Name
-/Items/Supplies/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Stock/attribute::color
+/Supplies/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Name/ancestor::Yarn
+/Supplies/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/descendant::Stock
+/Supplies/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Name/following-sibling::Price
+/Supplies/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Stock/preceding-sibling::Name
+/Supplies/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Name/following::Stock
+/Supplies/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Stock/preceding::Name
+/Supplies/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Stock/attribute::color
 
 2.
-//tools:Hooks[@type = //tools:Hooks[1]/@type]
+//t:Hooks[@type = //tools:Hooks[1]/@type]
 
 3.
 count(//text()[normalize-space()])
@@ -18,13 +18,13 @@ sum(//Price)
 4.
 //Item[Price < 3.00]
 //Item[Name='YarnArt Jeans']
-//tools:Item[tools:Price/@currency = //Fiber/Yarn/Manufacturer/Item/Price/@currency]
+//t:Item[t:Price/@currency = //Yarn/Manufacturer/Item/Price/@currency]
 //Item[Name='YarnArt Jeans']/Price + //Item[Name='Gazzal Baby Cotton']/Price
 
 5.
 //t:Item[t:Price > 2.60 ]
-//t:Item[t:Price > 2.60 ]/ancestor::t:Tools
-//t:Item[t:Price > 2.60 ]/ancestor::t:Tools/descendant::t:Name
+//t:Item[t:Price > 2.60 ]/ancestor::t:Needles
+//t:Item[t:Price > 2.60 ]/ancestor::t:Needles/descendant::t:Name
 
 6.
 1. aibę ir skaičių - //Item[Price = 1.80]
