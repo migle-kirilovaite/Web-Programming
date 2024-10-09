@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Items xmlns="http://yarnshop.com/items"
+<Supplies xmlns="http://yarnshop.com/items"
        xmlns:t="http://yarnshop.com/tools">
-    <Fiber>
         <Yarn type="cotton">
             <Manufacturer brand="YarnArt">
                 <Item>
@@ -32,8 +31,6 @@
                 </Item>
             </Manufacturer>
         </Yarn>
-    </Fiber>
-    <t:Tools>
         <t:Hooks type="Metal">
             <t:Manufacturer brand="KnitPro">
                 <t:Item>
@@ -52,5 +49,13 @@
                 </t:Item>
             </t:Manufacturer>
         </t:Needles>
-    </t:Tools>
-</Items>
+        <t:Clips type="Plastic">
+            <t:Manufacturer brand="KnitPro">
+                <t:Item>
+                    <t:Name>KnitPro segtukai</t:Name>
+                    <t:Price currency="Usd">0.20</t:Price>
+                    <t:Stock lastUpdated="2024-03-22">30</t:Stock>
+                </t:Item>
+            </t:Manufacturer>
+        </t:Clips>
+</Supplies>

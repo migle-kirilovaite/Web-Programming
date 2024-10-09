@@ -1,11 +1,11 @@
 ﻿1.
-/Items/Fiber/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Name/ancestor::Yarn
-/Items/Fiber/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/descendant::Stock
-/Items/Fiber/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Name/following-sibling::Price
-/Items/Fiber/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Stock/preceding-sibling::Name
-/Items/Fiber/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Name/following::Stock
-/Items/Fiber/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Stock/preceding::Name
-/Items/Fiber/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Stock/attribute::color
+/Items/Supplies/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Name/ancestor::Yarn
+/Items/Supplies/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/descendant::Stock
+/Items/Supplies/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Name/following-sibling::Price
+/Items/Supplies/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Stock/preceding-sibling::Name
+/Items/Supplies/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Name/following::Stock
+/Items/Supplies/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Stock/preceding::Name
+/Items/Supplies/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Stock/attribute::color
 
 2.
 //tools:Hooks[@type = //tools:Hooks[1]/@type]
