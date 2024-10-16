@@ -8,7 +8,7 @@
 /Supplies/Yarn[@type='cotton']/Manufacturer[@brand='YarnArt']/Item/Stock/attribute::color
 
 2.
-//t:Hooks[@type = //tools:Hooks[1]/@type]
+//t:Hooks[@type = //t:Hooks[1]/@type]
 
 3.
 count(//text()[normalize-space()])
@@ -27,15 +27,19 @@ sum(//Price)
 //t:Item[t:Price > 2.60 ]/ancestor::t:Needles/descendant::t:Name
 
 6.
-1. aibę ir skaičių - //Item[Price = 1.80]
-2. aibę ir eilutę - //Item[Name = "YarnArt Jeans"]
-3. aibę ir loginę reikšmę - boolean(//Item[Name])
-4. dvi aibes - //Item[Price] != //Item[Stock]
+1. aibę ir skaičių
+        //Item[Price = 1.80]
+2. aibę ir eilutę
+        //Item[Name = "YarnArt Jeans"]
+3. aibę ir loginę reikšmę
+        boolean(//Item[Name])
+4. dvi aibes
+        //Item[Price] != //Item[Stock]
 
 7.
 //Yarn[@type='cotton']/Manufacturer/Item/Price < //Yarn[@type='Wool']/Manufacturer/Item/Price
 
 8.
 Kai norima ištraukti duomenis iš interneto svetainių.
-XML Duomenų Apdorojimas.
 Testavimo Automatizavimas.
+XML Duomenų Apdorojimas.
