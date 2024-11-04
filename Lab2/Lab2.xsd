@@ -1,0 +1,87 @@
+﻿<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://yarnshop.com/items" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:item="http://yarnshop.com/items">
+    <xs:element name="Items" type="item:ItemsType"/>
+
+    <!-- Simple types for restrictions -->
+    <xs:simpleType name="CurrencyType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Usd"/>
+            <xs:enumeration value="Eur"/>
+            <xs:enumeration value="Gbp"/>
+            <xs:enumeration value="Jpy"/>
+            <xs:enumeration value="Aud"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="PriceType">
+        <xs:simpleContent>
+            <xs:extension base="xs:float">
+                <xs:attribute type="item:CurrencyType" name="currency"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="StockType">
+        <xs:simpleContent>
+            <xs:extension base="xs:byte">
+                <xs:attribute type="xs:string" name="color" use="optional"/>
+                <xs:attribute type="xs:string" name="size" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="ItemType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="Name"/>
+            <xs:element type="item:PriceType" name="Price"/>
+            <xs:element type="item:StockType" name="Stock"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ManufacturerType">
+        <xs:sequence>
+            <xs:element type="item:ItemType" name="Item" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="brand"/>
+    </xs:complexType>
+
+    <xs:complexType name="YarnType">
+        <xs:sequence>
+            <xs:element type="item:ManufacturerType" name="Manufacturer" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="type"/>
+    </xs:complexType>
+
+    <xs:complexType name="FiberType">
+        <xs:sequence>
+            <xs:element type="item:YarnType" name="Yarn" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="HooksType">
+        <xs:sequence>
+            <xs:element type="item:ManufacturerType" name="Manufacturer"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="type"/>
+    </xs:complexType>
+
+    <xs:complexType name="NeedlesType">
+        <xs:sequence>
+            <xs:element type="item:ManufacturerType" name="Manufacturer"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="type"/>
+    </xs:complexType>
+
+    <xs:complexType name="ToolsType">
+        <xs:sequence>
+            <xs:element type="item:HooksType" name="Hooks"/>
+            <xs:element type="item:NeedlesType" name="Needles"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ItemsType">
+        <xs:sequence>
+            <xs:element type="item:FiberType" name="Fiber"/>
+            <xs:element type="item:ToolsType" name="Tools"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
