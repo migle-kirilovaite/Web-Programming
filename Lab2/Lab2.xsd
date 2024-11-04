@@ -1,4 +1,4 @@
-﻿<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://yarnshop.com/items" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:item="http://yarnshop.com/items">
+﻿<xs:schema elementFormDefault="qualified" targetNamespace="http://yarnshop.com/items" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:item="http://yarnshop.com/items">
     <xs:element name="Items" type="item:ItemsType"/>
 
     <!-- Simple types for restrictions -->
@@ -28,8 +28,8 @@
     <xs:complexType name="StockType">
         <xs:simpleContent>
             <xs:extension base="xs:byte">
-                <xs:attribute type="xs:string" name="color" use="optional"/>
-                <xs:attribute type="xs:string" name="size" use="optional"/>
+                <xs:attribute type="xs:string" name="color"/>
+                <xs:attribute type="xs:string" name="size"/>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
@@ -87,7 +87,7 @@
         <xs:sequence>
             <xs:element type="item:FiberType" name="Fiber"/>
             <xs:element type="item:ToolsType" name="Tools"/>
-            <xs:element type="item:datesItemListUpdated" name="UpdatedDates" minOccurs="0" maxOccurs="1"/>
+            <xs:element type="item:datesItemListUpdated" name="UpdatedDates"/>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>
