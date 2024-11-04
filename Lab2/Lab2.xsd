@@ -1,7 +1,7 @@
 ﻿<xs:schema elementFormDefault="qualified" targetNamespace="http://yarnshop.com/items" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:item="http://yarnshop.com/items">
     <xs:element name="Items" type="item:ItemsType"/>
 
-    <!-- Simple types for restrictions -->
+    <!-- 1. Simple types for restrictions -->
     <xs:simpleType name="CurrencyType">
         <xs:restriction base="xs:string">
             <xs:enumeration value="Usd"/>
@@ -12,11 +12,12 @@
         </xs:restriction>
     </xs:simpleType>
 
-    <!-- New simple type for a list of dates indicating updates -->
+    <!-- 2. List type -->
     <xs:simpleType name="datesItemListUpdated">
         <xs:list itemType="xs:date"/>
     </xs:simpleType>
 
+    <!-- 3.2 Complex type with simple content with extension-->
     <xs:complexType name="PriceType">
         <xs:simpleContent>
             <xs:extension base="xs:float">
@@ -25,12 +26,13 @@
         </xs:simpleContent>
     </xs:complexType>
 
+    <!-- 3.1 Complex type with simple content with restriction -->
     <xs:complexType name="StockType">
         <xs:simpleContent>
-            <xs:extension base="xs:byte">
+            <xs:restriction base="xs:byte">
                 <xs:attribute type="xs:string" name="color"/>
                 <xs:attribute type="xs:string" name="size"/>
-            </xs:extension>
+            </xs:restriction>
         </xs:simpleContent>
     </xs:complexType>
 
