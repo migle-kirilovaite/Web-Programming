@@ -12,6 +12,11 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <!-- New simple type for a list of dates indicating updates -->
+    <xs:simpleType name="datesItemListUpdated">
+        <xs:list itemType="xs:date"/>
+    </xs:simpleType>
+
     <xs:complexType name="PriceType">
         <xs:simpleContent>
             <xs:extension base="xs:float">
@@ -82,6 +87,7 @@
         <xs:sequence>
             <xs:element type="item:FiberType" name="Fiber"/>
             <xs:element type="item:ToolsType" name="Tools"/>
+            <xs:element type="item:datesItemListUpdated" name="UpdatedDates" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>
