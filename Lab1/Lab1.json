@@ -1,109 +1,105 @@
 ﻿{
-  "Fiber": {
-    "Yarn": [
-      {
-        "@type": "cotton",
-        "Manufacturer": [
-          {
-            "@brand": "YarnArt",
-            "Item": [
-              {
-                "Name": "YarnArt Jeans",
-                "Price": {
-                  "@currency": "Eur",
-                  "#text": "1.80"
-                },
-                "Stock": {
-                  "@color": "Pink",
-                  "@lastUpdated": "2024-09-23",
-                  "#text": "20"
-                }
-              },
-              {
-                "Name": "YarnArt Macrame Cotton",
-                "Price": {
-                  "@currency": "Eur",
-                  "#text": "4.50"
-                },
-                "Stock": {
-                  "@color": "Blue",
-                  "@lastUpdated": "2024-08-15",
-                  "#text": "16"
-                }
-              }
-            ]
-          },
-          {
-            "@brand": "Gazzal",
-            "Item": {
-              "Name": "Gazzal Baby Cotton",
+  "Yarn": [
+    {
+      "@type": "cotton",
+      "Manufacturer": [
+        {
+          "@brand": "YarnArt",
+          "Item": [
+            {
+              "Name": "YarnArt Jeans",
               "Price": {
                 "@currency": "Eur",
                 "#text": "1.80"
               },
               "Stock": {
-                "@color": "Red",
-                "@lastUpdated": "2024-03-31",
-                "#text": "13"
+                "@color": "Pink",
+                "@lastUpdated": "2024-09-23",
+                "#text": "20"
+              }
+            },
+            {
+              "Name": "YarnArt Macrame Cotton",
+              "Price": {
+                "@currency": "Eur",
+                "#text": "4.50"
+              },
+              "Stock": {
+                "@color": "Blue",
+                "@lastUpdated": "2024-08-15",
+                "#text": "16"
               }
             }
-          }
-        ]
-      },
-      {
-        "@type": "Wool",
-        "Manufacturer": {
-          "@brand": "Alize",
+          ]
+        },
+        {
+          "@brand": "Gazzal",
           "Item": {
-            "Name": "Alize Merino Royal",
+            "Name": "Gazzal Baby Cotton",
             "Price": {
               "@currency": "Eur",
-              "#text": "3.50"
+              "#text": "1.80"
             },
             "Stock": {
-              "@color": "Yellow",
-              "@lastUpdated": "2024-06-05",
-              "#text": "4"
+              "@color": "Red",
+              "@lastUpdated": "2024-03-31",
+              "#text": "13"
             }
           }
         }
-      }
-    ]
-  },
-  "Tools": {
-    "Hooks": {
-      "@type": "Metal",
+      ]
+    },
+    {
+      "@type": "Wool",
       "Manufacturer": {
-        "@brand": "KnitPro",
+        "@brand": "Alize",
         "Item": {
-          "Name": "KnitPro vąšelis su rankenėle",
+          "Name": "Alize Merino Royal",
           "Price": {
             "@currency": "Eur",
-            "#text": "2.60"
+            "#text": "3.50"
           },
           "Stock": {
-            "@size": "3.5 mm",
-            "@lastUpdated": "2024-02-25",
-            "#text": "8"
+            "@color": "Yellow",
+            "@lastUpdated": "2024-06-05",
+            "#text": "4"
           }
         }
       }
-    },
-    "Needles": {
-      "@type": "Wood",
-      "Manufacturer": {
-        "@brand": "KnitPro",
-        "Item": {
-          "Name": "KnitPro Ginger virbalai su valu",
-          "Price": {
-            "@currency": "Eur",
-            "#text": "6.80"
-          },
-          "Stock": {
-            "@size": "5 mm",
-            "@lastUpdated": "2024-01-12",
-            "#text": "5"
-          }
+    }
+  ],
+  "Hooks": {
+    "@type": "Metal",
+    "Manufacturer": {
+      "@brand": "KnitPro",
+      "Item": {
+        "Name": "KnitPro vąšelis su rankenėle",
+        "Price": {
+          "@currency": "Eur",
+          "#text": "2.60"
+        },
+        "Stock": {
+          "@size": "3.5 mm",
+          "@lastUpdated": "2024-02-25",
+          "#text": "8"
+        }
+      }
+    }
+  },
+  "Needles": {
+    "@type": "Wood",
+    "Manufacturer": {
+      "@brand": "KnitPro",
+      "Item": {
+        "Name": "KnitPro Ginger virbalai su valu",
+        "Price": {
+          "@currency": "Usd",
+          "#text": "6.80"
+        },
+        "Stock": {
+          "@size": "5 mm",
+          "@lastUpdated": "2024-01-12",
+          "#text": "5"
         }
       }
     }
