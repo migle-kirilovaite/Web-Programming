@@ -17,6 +17,16 @@
         <xs:list itemType="xs:date"/>
     </xs:simpleType>
 
+    <!-- 3.1 Complex type with simple content with restriction-->
+    <xs:complexType name="LimitedPrice">
+        <xs:simpleContent>
+            <xs:restriction base="item:PriceType">
+                <xs:minInclusive value="0.01"/>
+                <xs:maxExclusive value="1000"/>
+            </xs:restriction>
+        </xs:simpleContent>
+    </xs:complexType>
+
     <!-- 3.2 Complex type with simple content with extension-->
     <xs:complexType name="PriceType">
         <xs:simpleContent>
@@ -26,21 +36,30 @@
         </xs:simpleContent>
     </xs:complexType>
 
-    <!-- 3.1 Complex type with simple content with restriction -->
+    <!-- 3.2 Complex type with simple content with extension-->
     <xs:complexType name="StockType">
         <xs:simpleContent>
-            <xs:restriction base="xs:byte">
+            <xs:extension base="xs:byte">
                 <xs:attribute type="xs:string" name="color"/>
-                <xs:attribute type="xs:string" name="size"/>
-            </xs:restriction>
+            </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
 
-    <xs:complexType name="ItemType">
+    <!-- 4.2 Complex type with extension based on another complex type -->
+    <xs:complexType name="ExtendedStockType">
+        <xs:complexContent>
+            <xs:extension base="item:StockType">
+                <xs:attribute type="xs:string" name="size"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <!-- 6. Complex type mixed -->
+    <xs:complexType name="ItemType" mixed="true">
         <xs:sequence>
             <xs:element type="xs:string" name="Name"/>
-            <xs:element type="item:PriceType" name="Price"/>
-            <xs:element type="item:StockType" name="Stock"/>
+            <xs:element type="item:LimitedPrice" name="Price"/>
+            <xs:element type="item:ExtendedStockType" name="Stock"/>
         </xs:sequence>
     </xs:complexType>
 
