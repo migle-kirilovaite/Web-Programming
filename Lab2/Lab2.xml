@@ -32,25 +32,5 @@
             </Manufacturer>
         </Yarn>
     </Fiber>
-    <Tools>
-        <Hooks type="Metal">
-            <Manufacturer brand="KnitPro">
-                <Item>
-                    <Name>KnitPro vąšelis su rankenėle</Name>
-                    <Price currency="Eur">2.60</Price>
-                    <Stock size="3.5mm">8</Stock>
-                </Item>
-            </Manufacturer>
-        </Hooks>
-        <Needles type="Wood">
-            <Manufacturer brand="KnitPro">
-                <Item>
-                    <Name>KnitPro Ginger virbalai su valu</Name>
-                    <Price currency="Usd">6.80</Price>
-                    <Stock size="5 mm">5</Stock>
-                </Item>
-            </Manufacturer>
-        </Needles>
-    </Tools>
     <UpdatedDates>2024-01-01 2024-02-14 2024-12-25</UpdatedDates>
 </Items>

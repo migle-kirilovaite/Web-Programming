@@ -104,10 +104,13 @@
         </xs:sequence>
     </xs:complexType>
 
+    <!-- 7. Choice -->
     <xs:complexType name="ItemsType">
         <xs:sequence>
-            <xs:element type="item:FiberType" name="Fiber"/>
-            <xs:element type="item:ToolsType" name="Tools"/>
+            <xs:choice>
+                <xs:element type="item:FiberType" name="Fiber"/>
+                <xs:element type="item:ToolsType" name="Tools"/>
+            </xs:choice>
             <xs:element type="item:datesItemListUpdated" name="UpdatedDates"/>
         </xs:sequence>
     </xs:complexType>
