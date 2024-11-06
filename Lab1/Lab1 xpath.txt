@@ -28,13 +28,13 @@ sum(//Price)
 
 6.
 1. aibę ir skaičių
-        //Item[Price = 1.80]
+//Item/Price = 1.80
 2. aibę ir eilutę
-        //Item[Name = "YarnArt Jeans"]
+//Item/Name = "YarnArt Jeans"
 3. aibę ir loginę reikšmę
-        boolean(//Item[Name])
+boolean(//Manufacturer[@brand = "Gazzal"]/Item/Name/text())
 4. dvi aibes
-        //Item[Price] != //Item[Stock]
+//Item[Price] != //Item[Stock]
 
 7.
 //Yarn[@type='cotton']/Manufacturer/Item/Price < //Yarn[@type='Wool']/Manufacturer/Item/Price
