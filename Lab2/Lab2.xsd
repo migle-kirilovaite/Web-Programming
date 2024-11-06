@@ -1,0 +1,114 @@
+﻿<xs:schema elementFormDefault="qualified" targetNamespace="http://yarnshop.com/items" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:item="http://yarnshop.com/items">
+    <xs:element name="Items" type="item:ItemsType"/>
+
+    <!-- 1. Simple types for restrictions -->
+    <xs:simpleType name="CurrencyType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Usd"/>
+            <xs:enumeration value="Eur"/>
+            <xs:enumeration value="Gbp"/>
+            <xs:enumeration value="Jpy"/>
+            <xs:enumeration value="Aud"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- 2. List type -->
+    <xs:simpleType name="datesItemListUpdated">
+        <xs:list itemType="xs:date"/>
+    </xs:simpleType>
+
+    <!-- 3.1 Complex type with simple content with restriction-->
+    <xs:complexType name="LimitedPrice">
+        <xs:simpleContent>
+            <xs:restriction base="item:PriceType">
+                <xs:minInclusive value="0.01"/>
+                <xs:maxExclusive value="1000"/>
+            </xs:restriction>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <!-- 3.2 Complex type with simple content with extension-->
+    <xs:complexType name="PriceType">
+        <xs:simpleContent>
+            <xs:extension base="xs:float">
+                <xs:attribute type="item:CurrencyType" name="currency"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <!-- 3.2 Complex type with simple content with extension-->
+    <xs:complexType name="StockType">
+        <xs:simpleContent>
+            <xs:extension base="xs:byte">
+                <xs:attribute type="xs:string" name="color"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <!-- 4.2 Complex type with extension based on another complex type -->
+    <xs:complexType name="ExtendedStockType">
+        <xs:complexContent>
+            <xs:extension base="item:StockType">
+                <xs:attribute type="xs:string" name="size"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <!-- 6. Complex type mixed -->
+    <xs:complexType name="ItemType" mixed="true">
+        <xs:sequence>
+            <xs:element type="xs:string" name="Name"/>
+            <xs:element type="item:LimitedPrice" name="Price"/>
+            <xs:element type="item:ExtendedStockType" name="Stock"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ManufacturerType">
+        <xs:sequence>
+            <xs:element type="item:ItemType" name="Item" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="brand"/>
+    </xs:complexType>
+
+    <xs:complexType name="YarnType">
+        <xs:sequence>
+            <xs:element type="item:ManufacturerType" name="Manufacturer" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="type"/>
+    </xs:complexType>
+
+    <xs:complexType name="FiberType">
+        <xs:sequence>
+            <xs:element type="item:YarnType" name="Yarn" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="HooksType">
+        <xs:sequence>
+            <xs:element type="item:ManufacturerType" name="Manufacturer"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="type"/>
+    </xs:complexType>
+
+    <xs:complexType name="NeedlesType">
+        <xs:sequence>
+            <xs:element type="item:ManufacturerType" name="Manufacturer"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="type"/>
+    </xs:complexType>
+
+    <xs:complexType name="ToolsType">
+        <xs:sequence>
+            <xs:element type="item:HooksType" name="Hooks"/>
+            <xs:element type="item:NeedlesType" name="Needles"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ItemsType">
+        <xs:sequence>
+            <xs:element type="item:FiberType" name="Fiber"/>
+            <xs:element type="item:ToolsType" name="Tools"/>
+            <xs:element type="item:datesItemListUpdated" name="UpdatedDates"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

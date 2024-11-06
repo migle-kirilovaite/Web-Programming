@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Items xmlns="http://yarnshop.com/items">
+    <Fiber>
+        <Yarn type="cotton">
+            <Manufacturer brand="YarnArt">
+                <Item>
+                    <Name>YarnArt Jeans</Name>
+                    <Price currency="Eur">1.80</Price>
+                    <Stock color="Pink">20</Stock>
+                </Item>
+                <Item>
+                    <Name>YarnArt Macrame Cotton</Name>
+                    <Price currency="Eur">4.50</Price>
+                    <Stock color="Blue">16</Stock>
+                </Item>
+            </Manufacturer>
+            <Manufacturer brand="Gazzal">
+                <Item>
+                    <Name>Gazzal Baby Cotton</Name>
+                    <Price currency="Eur">1.80</Price>
+                    <Stock color="Red">13</Stock>
+                </Item>
+            </Manufacturer>
+        </Yarn>
+        <Yarn type="Wool">
+            <Manufacturer brand="Alize">
+                <Item>
+                    <Name>Alize Merino Royal</Name>
+                    <Price currency="Eur">3.50</Price>
+                    <Stock color="Yellow">4</Stock>
+                </Item>
+            </Manufacturer>
+        </Yarn>
+    </Fiber>
+    <Tools>
+        <Hooks type="Metal">
+            <Manufacturer brand="KnitPro">
+                <Item>
+                    <Name>KnitPro vąšelis su rankenėle</Name>
+                    <Price currency="Eur">2.60</Price>
+                    <Stock size="3.5mm">8</Stock>
+                </Item>
+            </Manufacturer>
+        </Hooks>
+        <Needles type="Wood">
+            <Manufacturer brand="KnitPro">
+                <Item>
+                    <Name>KnitPro Ginger virbalai su valu</Name>
+                    <Price currency="Usd">6.80</Price>
+                    <Stock size="5 mm">5</Stock>
+                </Item>
+            </Manufacturer>
+        </Needles>
+    </Tools>
+    <UpdatedDates>2024-01-01 2024-02-14 2024-12-25</UpdatedDates>
+</Items>
