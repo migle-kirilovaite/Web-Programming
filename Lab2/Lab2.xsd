@@ -1,5 +1,4 @@
 ﻿<xs:schema elementFormDefault="qualified" targetNamespace="http://yarnshop.com/items" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:item="http://yarnshop.com/items">
-
     <!-- 9. Keyref to key with unique constraint -->
     <xs:element name="Items" type="item:ItemsType">
         <xs:key name="uniqueItemID">
@@ -49,7 +48,7 @@
     </xs:complexType>
 
     <!-- 3.2 Complex type with simple content with extension-->
-    <xs:complexType name="StockType">
+    <xs:complexType name="StockType" mixed="true">
         <xs:simpleContent>
             <xs:extension base="xs:byte">
                 <xs:attribute type="xs:string" name="color"/>
@@ -66,12 +65,28 @@
         </xs:complexContent>
     </xs:complexType>
 
+    <xs:simpleType name="Sizes">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="1 mm"/>
+            <xs:enumeration value="2 mm"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- 4.1 Complex type with restriction based on another complex type -->
+    <xs:complexType name="RestrictedStockType">
+        <xs:complexContent>
+            <xs:restriction base="item:ExtendedStockType">
+                <xs:attribute type="item:Sizes" name="size"/>
+            </xs:restriction>
+        </xs:complexContent>
+    </xs:complexType>
+
     <!-- 6. Complex type mixed -->
     <xs:complexType name="ItemType" mixed="true">
         <xs:sequence>
             <xs:element type="xs:string" name="Name"/>
             <xs:element type="item:LimitedPrice" name="Price"/>
-            <xs:element type="item:ExtendedStockType" name="Stock"/>
+            <xs:element type="item:RestrictedStockType" name="Stock"/>
         </xs:sequence>
         <xs:attribute type="xs:string" name="id" use="required"/> <!-- ID attribute -->
     </xs:complexType>

@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Items xmlns="http://yarnshop.com/items">
     <Fiber>
-        <Yarn type="cotton">
+        <Yarn type="Cotton">
             <Manufacturer brand="YarnArt">
                 <Item id="item1">
                     <Name>YarnArt Jeans</Name>
                     <Price currency="Eur">1.80</Price>
-                    <Stock color="Pink">20</Stock>
+                    <Stock color="Pink" size = "2 mm">20</Stock>
                 </Item>
                 <Item id="item2">
                     <Name>YarnArt Macrame Cotton</Name>
