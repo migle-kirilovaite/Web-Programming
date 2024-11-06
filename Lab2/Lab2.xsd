@@ -1,5 +1,17 @@
 ﻿<xs:schema elementFormDefault="qualified" targetNamespace="http://yarnshop.com/items" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:item="http://yarnshop.com/items">
-    <xs:element name="Items" type="item:ItemsType"/>
+
+    <!-- 9. Keyref to key with unique constraint -->
+    <xs:element name="Items" type="item:ItemsType">
+        <xs:key name="uniqueItemID">
+            <xs:selector xpath="item:Fiber/item:Yarn/item:Manufacturer/item:Item"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+
+        <xs:keyref name="itemReference" refer="item:uniqueItemID">
+            <xs:selector xpath="item:Fiber/item:Yarn/item:Manufacturer/item:Item"/>
+            <xs:field xpath="@id"/>
+        </xs:keyref>
+    </xs:element>
 
     <!-- 1. Simple types for restrictions -->
     <xs:simpleType name="CurrencyType">
@@ -61,6 +73,7 @@
             <xs:element type="item:LimitedPrice" name="Price"/>
             <xs:element type="item:ExtendedStockType" name="Stock"/>
         </xs:sequence>
+        <xs:attribute type="xs:string" name="id" use="required"/> <!-- ID attribute -->
     </xs:complexType>
 
     <xs:complexType name="ManufacturerType">

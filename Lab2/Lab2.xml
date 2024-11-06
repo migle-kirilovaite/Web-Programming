@@ -3,19 +3,19 @@
     <Fiber>
         <Yarn type="cotton">
             <Manufacturer brand="YarnArt">
-                <Item>
+                <Item id="item1">
                     <Name>YarnArt Jeans</Name>
                     <Price currency="Eur">1.80</Price>
                     <Stock color="Pink">20</Stock>
                 </Item>
-                <Item>
+                <Item id="item2">
                     <Name>YarnArt Macrame Cotton</Name>
                     <Price currency="Eur">4.50</Price>
                     <Stock color="Blue">16</Stock>
                 </Item>
             </Manufacturer>
             <Manufacturer brand="Gazzal">
-                <Item>
+                <Item id="item3">
                     <Name>Gazzal Baby Cotton</Name>
                     <Price currency="Eur">1.80</Price>
                     <Stock color="Red">13</Stock>
@@ -24,7 +24,7 @@
         </Yarn>
         <Yarn type="Wool">
             <Manufacturer brand="Alize">
-                <Item>
+                <Item id="item4">
                     <Name>Alize Merino Royal</Name>
                     <Price currency="Eur">3.50</Price>
                     <Stock color="Yellow">4</Stock>
