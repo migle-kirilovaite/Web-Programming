@@ -1,0 +1,165 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "Items": {
+      "type": "object",
+      "oneOf": [
+        {
+          "properties": {
+            "Fiber": {
+              "type": "object",
+              "properties": {
+                "Yarn": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/YarnType"
+                  }
+                }
+              }
+            }
+          },
+          "required": ["Fiber"]
+        },
+        {
+          "properties": {
+            "Tools": {
+              "type": "object",
+              "properties": {
+                "Hooks": {
+                  "$ref": "#/definitions/HooksType"
+                },
+                "Needles": {
+                  "$ref": "#/definitions/NeedlesType"
+                }
+              }
+            }
+          },
+          "required": ["Tools"]
+        }
+      ]
+    },
+    "UpdatedDates": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "date"
+      }
+    }
+  },
+  "definitions": {
+    "YarnType": {
+      "type": "object",
+      "properties": {
+        "Manufacturer": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ManufacturerType"
+          }
+        }
+      }
+    },
+    "ManufacturerType": {
+      "type": "object",
+      "properties": {
+        "Item": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ItemType"
+          }
+        },
+        "brand": {
+          "type": "string"
+        }
+      }
+    },
+    "ItemType": {
+      "type": "object",
+      "properties": {
+        "Name": {
+          "type": "string"
+        },
+        "Price": {
+          "$ref": "#/definitions/PriceType"
+        },
+        "Stock": {
+          "$ref": "#/definitions/StockType"
+        },
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": ["Name", "Price", "Stock", "id"]
+    },
+    "PriceType": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number",
+          "exclusiveMinimum": 0.01,
+          "exclusiveMaximum": 1000
+        },
+        "currency": {
+          "$ref": "#/definitions/CurrencyType"
+        }
+      },
+      "required": ["value"]
+    },
+    "CurrencyType": {
+      "type": "string",
+      "enum": ["Usd", "Eur", "Gbp", "Jpy", "Aud"]
+    },
+    "StockType": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 500
+        },
+        "size": {
+          "type": "string"
+        }
+      },
+      "required": ["value", "size"]
+    },
+    "HooksType": {
+      "type": "object",
+      "properties": {
+        "Manufacturer": {
+          "type": "object",
+          "properties": {
+            "brand": {
+              "type": "string"
+            },
+            "Item": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ItemType"
+              }
+            }
+          }
+        }
+      }
+    },
+    "NeedlesType": {
+      "type": "object",
+      "properties": {
+        "Manufacturer": {
+          "type": "object",
+          "properties": {
+            "brand": {
+              "type": "string"
+            },
+            "Item": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ItemType"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

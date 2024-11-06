@@ -1,0 +1,48 @@
+﻿{
+  "Items": {
+    "Tools": {
+      "Hooks": {
+        "Manufacturer": {
+          "brand": "HookMaster",
+          "Item": [
+            {
+              "Name": "Large Crochet Hook",
+              "Price": {
+                "value": 12.99,
+                "currency": "Usd"
+              },
+              "Stock": {
+                "value": 200,
+                "size": "1 mm"
+              },
+              "id": "Hook001"
+            }
+          ]
+        }
+      },
+      "Needles": {
+        "Manufacturer": {
+          "brand": "NeedleWorks",
+          "Item": [
+            {
+              "Name": "Knitting Needle Set",
+              "Price": {
+                "value": 15.99,
+                "currency": "Gbp"
+              },
+              "Stock": {
+                "value": 150,
+                "size": "2 mm"
+              },
+              "id": "Needle001"
+            }
+          ]
+        }
+      }
+    },
+    "UpdatedDates": [
+      "2024-10-01",
+      "2024-11-01"
+    ]
+  }
+}
