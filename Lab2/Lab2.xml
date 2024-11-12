@@ -4,6 +4,7 @@
         <Yarn type="Cotton">
             <Manufacturer brand="YarnArt">
                 <Item id="item1">
+                    This yarn is soft and durable.
                     <Name>YarnArt Jeans</Name>
                     <Price currency="Eur">1.80</Price>
                     <Stock color="Pink" size = "2 mm">20</Stock>

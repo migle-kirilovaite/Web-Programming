@@ -25,14 +25,18 @@
           "properties": {
             "Tools": {
               "type": "object",
-              "properties": {
-                "Hooks": {
-                  "$ref": "#/definitions/HooksType"
-                },
-                "Needles": {
-                  "$ref": "#/definitions/NeedlesType"
+              "anyOf": [
+                {
+                  "properties": {
+                    "Hooks": {
+                      "$ref": "#/definitions/HooksType"
+                    },
+                    "Needles": {
+                      "$ref": "#/definitions/NeedlesType"
+                    }
+                  }
                 }
-              }
+              ]
             }
           },
           "required": ["Tools"]
@@ -75,21 +79,24 @@
     },
     "ItemType": {
       "type": "object",
-      "properties": {
-        "Name": {
-          "type": "string"
-        },
-        "Price": {
-          "$ref": "#/definitions/PriceType"
-        },
-        "Stock": {
-          "$ref": "#/definitions/StockType"
-        },
-        "id": {
-          "type": "string"
+      "allOf": [
+        {
+          "properties": {
+            "Name": {
+              "type": "string"
+            },
+            "Price": {
+              "$ref": "#/definitions/PriceType"
+            },
+            "Stock": {
+              "$ref": "#/definitions/StockType"
+            },
+            "id": {
+              "type": "string"
+            }
+          }
         }
-      },
-      "required": ["Name", "Price", "Stock", "id"]
+      ]
     },
     "PriceType": {
       "type": "object",
@@ -118,7 +125,8 @@
           "maximum": 500
         },
         "size": {
-          "type": "string"
+          "type": "string",
+          "pattern": "^(\\d+(\\.\\d+)? mm)$"
         }
       },
       "required": ["value", "size"]
@@ -130,7 +138,8 @@
           "type": "object",
           "properties": {
             "brand": {
-              "type": "string"
+              "type": "string",
+              "pattern": "^[A-Z][a-zA-Z\\s]*$"
             },
             "Item": {
               "type": "array",
