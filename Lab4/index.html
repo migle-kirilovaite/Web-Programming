@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<h1>Sudoku Žaidimas</h1>
+<div id="error-message" class="hidden">Klaida: Užpildykite visus langelius teisingais skaičiais!</div>
+<div id="success-message" class="hidden">Sveikiname! Jūsų sprendimas yra teisingas!</div>
+
+<table id="sudoku-board"></table>
+
+<div class="buttons">
+    <button id="validate">Patvirtinti</button>
+    <button id="reset">Naujas Žaidimas</button>
+    <button id="autofill">Autopildymas</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

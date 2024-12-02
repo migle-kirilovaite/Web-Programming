@@ -1,0 +1,80 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+    background-color: white;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    padding: 0;
+    text-align: center;
+}
+
+/* Inputs inside the cells */
+input {
+    width: 90%;
+    height: 90%;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+
+input[disabled] {
+    background-color: #e2ffea;
+    font-weight: bold;
+    color: black;
+}
+
+
+td:nth-child(3n) {
+    border-right: 2px solid black;
+}
+
+tr:nth-child(3n) td {
+    border-bottom: 2px solid black;
+}
+
+tr:nth-child(1) td {
+    border-top: 2px solid black;
+}
+
+td:nth-child(1) {
+    border-left: 2px solid black;
+}
+
+.hidden {
+    display: none;
+}
+
+#success-message {
+    color: green;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#error-message {
+    color: red;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.buttons {
+    margin-top: 20px;
+}
